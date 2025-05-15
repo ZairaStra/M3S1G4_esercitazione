@@ -40,7 +40,7 @@ class CommentArea extends Component {
     return (
       <Container>
         <CommentList comments={this.state.comments} />
-        <AddComment asin={this.props.asin} onCommentAdded={this.fetchComments} />
+        <AddComment asin={this.props.asin} />
       </Container>
     );
   }
