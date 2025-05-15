@@ -13,8 +13,8 @@ class AllTheBooks extends Component {
     return (
       <Container>
         <div className="text-center mb-5">
-          <h3 className="my-4 font-monospace text-danger-emphasis">Browse by genre</h3>
-          <Row className="my-5 justify-content-center">
+          <h3 className="my-3 font-monospace text-danger-emphasis">Browse by genre</h3>
+          <Row className="my-3 justify-content-center">
             <Col className="col-12 col-sm-10 col-lg-8">
               <Row className="gx-0 gy-4">
                 <Col>

@@ -23,7 +23,7 @@ class CommentArea extends Component {
 
       if (response.ok) {
         const comments = await response.json();
-        this.setState({ comments: comments });
+        this.setState({ comments });
       } else {
         throw new Error("Error loading comments");
       }
@@ -40,7 +40,7 @@ class CommentArea extends Component {
     return (
       <Container>
         <CommentList comments={this.state.comments} />
-        <AddComment asin={this.props.asin} />
+        <AddComment asin={this.props.asin} onCommentAdded={this.props.onCommentAdded} />
       </Container>
     );
   }

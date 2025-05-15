@@ -11,12 +11,12 @@ class BookList extends Component {
   render() {
     return (
       <Container>
-        <div className="mb-5">
+        <div className="mb-3">
           <h3 className="my-4 font-monospace text-center text-danger-emphasis">
             {this.props.books.length > 0 ? `Search by name in: ${this.props.books[0].category.toUpperCase()}` : "Search by name"}
           </h3>
           {/* <h3 className="my-4 font-monospace text-center">Search by name in the category: {this.props.books[0].category}</h3> */}
-          <Row className="my-5 justify-content-center">
+          <Row className="my-3 justify-content-center">
             <Col className="col-12 col-md-10">
               <Row className="justify-content-center gx-4 gy-4 mb-5">
                 <Col className="col-11">
