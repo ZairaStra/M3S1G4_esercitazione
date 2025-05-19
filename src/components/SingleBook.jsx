@@ -38,15 +38,11 @@ class SingleBook extends Component {
           </Alert>
         )}
 
-        <Card className={`singleCard ${this.state.isCardSelected ? "bg-danger-subtle shadow-danger rounded" : ""} `} onClick={this.cardToggle}>
-          <Card.Img className="singleCardImg" variant="top" src={this.props.book.img} />
+        <Card className={`singleCard ${this.state.isCardSelected ? "bg-danger-subtle shadow-danger rounded" : ""} `}>
+          <Card.Img className="singleCardImg" variant="top" src={this.props.book.img} onClick={this.cardToggle} />
           <Card.Body className="text-center">
             <Card.Title className="singleCardTitle overflow-hidden text-danger-emphasis">{this.props.book.title}</Card.Title>
-            {this.state.isCardSelected && (
-              <div onClick={(e) => e.stopPropagation()}>
-                <CommentArea asin={this.props.book.asin} onCommentAdded={this.commentAdded} />
-              </div>
-            )}
+            {this.state.isCardSelected && <CommentArea asin={this.props.book.asin} onCommentAdded={this.commentAdded} />}
           </Card.Body>
         </Card>
       </>
